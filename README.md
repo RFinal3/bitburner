@@ -1,3 +1,5 @@
+All credit goes to Moriakaice, I just edited his code here and there towards my preferences.
+
 # Bitburner scripts collection
 
 Welcome to my log of [Bitburner](https://danielyxie.github.io/bitburner/) scripts. They are written using the in-game language of NetscriptJS, which is a mutation of Javascript.
@@ -22,7 +24,7 @@ export async function main(ns) {
   }
 
   await ns.wget(
-    `https://raw.githubusercontent.com/moriakaice/bitburner/master/src/initHacking.ns?ts=${new Date().getTime()}`,
+    `https://raw.githubusercontent.com/RFinal3/bitburner/master/src/initHacking.ns?ts=${new Date().getTime()}`,
     "initHacking.ns"
   );
   ns.spawn("initHacking.ns", 1);
