@@ -70,7 +70,6 @@ export async function main(ns) {
     ns.spawn(scriptToRunAfter, 1)
   } else {
     ns.tprint(`[${localeHHMMSS()}] Spawning runHacking.ns & runListeners.ns`)
-    ns.run('runListeners', 1)
-    ns.spawn('runHacking.ns', 1)
+    ns.spawn('runHacking.ns', 1, 'runListeners.ns', 1)
   }
 }
