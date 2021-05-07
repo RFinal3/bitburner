@@ -24,11 +24,11 @@ export async function main(ns) {
     ns.tprint(`[${localeHHMMSS()}] Spawning playerServers.ns`)
     ns.spawn('playerServers.ns', 1)    
 	ns.tprint(`[${localeHHMMSS()}] Spawning nodeManager.ns`)
-    ns.run('nodeManager.ns', 1)
+    ns.spawn('nodeManager.ns', 1)
   } else {
     ns.tprint(`[${localeHHMMSS()}] Spawning spider.ns`)
     ns.spawn('spider.ns', 1, 'mainHack.ns')
 	ns.tprint(`[${localeHHMMSS()}] Spawning nodeManager.ns`)
-    ns.run('nodeManager.ns', 1)
+    ns.spawn('nodeManager.ns', 1)
   }
 }
