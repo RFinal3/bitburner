@@ -10,7 +10,6 @@ const filesToDownload = [
   'killAll.ns',
   'runHacking.ns',
   'find.ns',
-  'runListeners.ns',
   'nodeManager.ns',
   'ramManager.ns',
   'torManager.ns',
@@ -48,5 +47,5 @@ export async function main(ns) {
   valuesToRemove.map((value) => localStorage.removeItem(value))
 
   ns.tprint(`[${localeHHMMSS()}] Spawning killAll.ns`)
-  ns.spawn('killAll.ns', 1, 'runHacking.ns', 1, 'runListeners.ns',)
+  ns.spawn('killAll.ns', 1, 'runHacking.ns')
 }
