@@ -142,10 +142,12 @@ export async function main(ns) {
   setItem(settings().keys.serverMap, serverMap)
 
   if (!scriptToRunAfter) {
-    ns.tprint(`[${localeHHMMSS()}] Spawning mainHack.ns`)
+    ns.tprint(`[${localeHHMMSS()}] Spawning mainHack.ns & runListeners.ns`)
+    ns.run('runListeners.ns', 1)
     ns.spawn('mainHack.ns', 1)
   } else {
-    ns.tprint(`[${localeHHMMSS()}] Spawning ${scriptToRunAfter}`)
+    ns.tprint(`[${localeHHMMSS()}] Spawning ${scriptToRunAfter} & runListeners.ns`)
+    ns.run('runListeners.ns', 1)
     ns.spawn(scriptToRunAfter, 1)
   }
 }

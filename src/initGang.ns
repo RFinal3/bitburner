@@ -39,6 +39,6 @@ export async function main(ns) {
   valuesToRemove.map((value) => localStorage.removeItem(value))
 
   ns.tprint(`[${localeHHMMSS()}] Spawning commitCrime.ns`)
-  ns.spawn('commitCrime.ns')
+  ns.spawn('commitCrime.ns', 1)
   }
   

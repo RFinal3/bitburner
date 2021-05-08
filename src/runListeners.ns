@@ -1,0 +1,22 @@
+function localeHHMMSS(ms = 0) {
+  if (!ms) {
+    ms = new Date().getTime()
+  }
+
+  return new Date(ms).toLocaleTimeString()
+}
+
+export async function main(ns) {
+  ns.tprint(`[${localeHHMMSS()}] Starting runListeners.ns`)
+
+  let hostname = ns.getHostname()
+
+  if (hostname !== 'home') {
+    throw new Exception('Run the script from home')
+  }
+    ns.tprint(`[${localeHHMMSS()}] Spawning Listeners`)
+    await ns.run('torManager.ns', 1)
+    await ns.run('ramManager.ns', 1)
+    await ns.run('joiningManager.ns', 1)
+    ns.spawn('nodeManager.ns', 1,)
+}
