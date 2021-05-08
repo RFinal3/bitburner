@@ -1,6 +1,6 @@
 const settings = {
-  homeRamReserved: 25,
-  homeRamReservedBase: 25,
+  homeRamReserved: 30,
+  homeRamReservedBase: 30,
   homeRamExtraRamReserved: 12,
   homeRamBigMode: 64,
   minSecurityLevelOffset: 1,
