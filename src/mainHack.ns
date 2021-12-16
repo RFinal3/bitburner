@@ -96,7 +96,7 @@ function getHackableServers(ns, servers) {
     .filter((hostname) => servers[hostname].ports <= playerDetails.portHacks || ns.hasRootAccess(hostname))
     .map((hostname) => {
       if (hostname !== 'home') {
-        if (!ns.hasRootAccess(hostname)) {
+        await if (!ns.hasRootAccess(hostname)) {
           hackPrograms.forEach((hackProgram) => {
             if (ns.fileExists(hackProgram, 'home')) {
               ns[hackProgram.split('.').shift().toLocaleLowerCase()](hostname)
